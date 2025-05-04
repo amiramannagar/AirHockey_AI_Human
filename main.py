@@ -105,7 +105,7 @@ def show_winner(text):
     pygame.time.delay(3000)
 
 def minimax_move():
-    # Very basic minimax-style movement: go toward the puck if it's on the left half
+    #go toward the puck if it's on the left half
     if puck_pos[0] < WIDTH // 2:
         if paddle1_pos[0] < puck_pos[0] and paddle1_pos[0] < WIDTH // 2 - PADDLE_RADIUS:
             paddle1_pos[0] += 4
@@ -141,7 +141,7 @@ while game_on:
     # Player 1 AI - Minimax-style greedy movement
     minimax_move()
 
-    # Player 2 - Arrow Keys
+    # Player 2 Human - Arrow Keys
     keys = pygame.key.get_pressed()
     if keys[pygame.K_UP] and paddle2_pos[1] > PADDLE_RADIUS:
         paddle2_pos[1] -= 5
